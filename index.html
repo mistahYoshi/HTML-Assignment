@@ -2,11 +2,17 @@
 
 <head>
     <title>Kiyoshi's HTML Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        li {
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
     <header id="header">
-        <h1>A Little Bit About Kiyoshi</h1>
+        <h1 id="header-1">A Little Bit About Kiyoshi</h1>
         <h2>A Little Bit About Kiyoshi</h2>
         <h3>A Little Bit About Kiyoshi</h3>
         <h4>A Little Bit About Kiyoshi</h4>
@@ -15,7 +21,9 @@
     </header>
     <div>
         <p><b>Colors</b></p>
-        <p>My favorite color is <span style="color:blue">blue</span></p>
+        <div>
+            <p>My favorite color is <span style="color:blue">blue</span></p>
+        </div>
     </div>
     <nav>
         <p><b>Websites</b></p>
@@ -23,53 +31,73 @@
     </nav>
     <div>
         <p><b>Favorite Childhood Toy</b></p>
-        <img src="https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_Lego_swallowing.png">
+        <div>
+            <img src="https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_Lego_swallowing.png">
+        </div>
     </div>
-    <div>
+    <div class="Table">
         <p><b>List of my Favorite Things to Watch</b></p>
         <table>
             <tr>
-                <th><b>Title</b></th>
-                <th>Type</th>
+                <!-- .Compounding[Selector]-->
+                <th class="Table" Title><b>Title</b></th>
+                <th Type>Type</th>
             </tr>
             <tr>
-                <td><b>Avengers: Endgame</b></td>
-                <td>Superhero/Movie</td>
+                <td Title><b>Avengers: Endgame</b></td>
+                <td Type>Superhero/Movie</td>
             </tr>
             <tr>
-                <td><b>Avatar: The Last Airbender</b></td>
-                <td>Cartoon/TV Show</td>
+                <td Title><b>Avatar: The Last Airbender</b></td>
+                <td Type>Cartoon/TV Show</td>
             </tr>
             <tr>
-                <td><b>Dragon Ball</b></td>
-                <td>Anime/TV Show</td>
+                <td Title="Title Value"><b>Dragon Ball</b></td>
+                <td Type>Anime/TV Show</td>
             </tr>
             <tr>
-                <td><b>Harry Potter: (All)</b></td>
-                <td>Fantasy/Movie</td>
+                <td Title><b>Harry Potter: (All)</b></td>
+                <td Type>Fantasy/Movie</td>
             </tr>
         </table>
+        <p Title="Title Value">This Color means it is my All time Favorite</p>
     </div>
     <div>
-        <p><b>Top 3 Food</b></p>
-        <ol>
-            <li>Poke Bowl</li>
-            <li>Mochiko Chicken</li>
-            <li>Japanese Curry</li>
+        <!-- parent child-->
+        <ol class="Foodie">
+            <b>Top 3 Food</b>
+            <div>
+                <li>Poke Bowl</li>
+                <li>Mochiko Chicken</li>
+                <li>Curry
+                    <ul>
+                        <li>Thai</li>
+                        <li>Japanese</li>
+                    </ul>
+                </li>
         </ol>
     </div>
+    </div>
     <div>
-        <p class="essentials"><b>Everyday Carry to School</b></p>
-        <ul>
-            <li>iPad Air</li>
-            <li>iPhone</li>
-            <li>Macbook Pro</li>
-            <li>Apple Pencil 1<sup>st</sup> Gen</li>
-            <li>40<sup>oz</sup> Hydoflask</li>
-            <li>Pilot FriXion Pen</li>
-            <li>Five Star College Rule Notebook: 1 Subject</li>
-            <li><i>More to list...</i></li>
+        <!-- ancestor-descendent-->
+        <ul class="Essentials">
+            <b>Everyday Carry to School</b>
+            <div>
+                <li>iPad Air</li>
+                <li>iPhone</li>
+                <li>Macbook Pro</li>
+                <li>Apple Pencil 1<sup>st</sup> Gen</li>
+                <li>40<sup>oz</sup> Hydoflask</li>
+                <li>Pilot FriXion Pen</li>
+                <li>
+                    <ul>
+                        Five Star College Rule Notebook
+                        <li>1 Subject</li>
+                    </ul>
+                </li>
+                <li><i>More to list...</i></li>
         </ul>
+    </div>
     </div>
     <footer id="footer">
         Thank you for taking a look at my assignment
